@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Iberfacil\AeatVnif\Cli\Application;
+
+foreach ([__DIR__ . '/../vendor/autoload.php', __DIR__ . '/../../../autoload.php'] as $autoload) {
+    if (is_file($autoload)) {
+        require $autoload;
+        break;
+    }
+}
+
+if (! class_exists(Application::class)) {
+    fwrite(STDERR, 'No se encuentra el autoload de Composer. Ejecute "composer install".' . PHP_EOL);
+    exit(1);
+}
+
+$argv = $_SERVER['argv'] ?? [];
+array_shift($argv);
+
+exit((new Application)->run(array_values(array_map('strval', $argv))));
