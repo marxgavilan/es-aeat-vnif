@@ -1,0 +1,7 @@
+parameters:
+    level: 8
+    paths:
+        - src
+        - tests
+        - bin/aeat-vnif
+    treatPhpDocTypesAsCertain: false

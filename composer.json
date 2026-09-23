@@ -1,0 +1,87 @@
+{
+    "name": "iberfacil/es-aeat-vnif",
+    "description": "Cliente PHP del servicio VNifV2 de la AEAT: comprueba NIF y nombre contra el censo con certificado electrónico (.p12/.pfx), sin framework, con adaptador opcional para Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "aeat",
+        "vnif",
+        "vnifv2",
+        "nif",
+        "censo",
+        "agencia-tributaria",
+        "spain",
+        "españa",
+        "laravel"
+    ],
+    "homepage": "https://iberfacil.es",
+    "authors": [
+        {
+            "name": "Marco Gavilán",
+            "homepage": "https://iberfacil.es",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-curl": "*",
+        "ext-dom": "*",
+        "ext-libxml": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "illuminate/console": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/contracts": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+        "laravel/pint": "^1.20",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.5",
+        "psr/simple-cache": "^3.0"
+    },
+    "suggest": {
+        "ext-intl": "Normaliza el nombre en Unicode NFC antes de plegar acentos (recomendado).",
+        "illuminate/support": "Para usar el proveedor de servicio, la fachada y el comando Artisan.",
+        "psr/simple-cache": "Para inyectar cualquier caché PSR-16 como caché de resultados."
+    },
+    "autoload": {
+        "psr-4": {
+            "Iberfacil\\AeatVnif\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Iberfacil\\AeatVnif\\Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "bin/aeat-vnif"
+    ],
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --memory-limit=512M",
+        "format": "pint",
+        "format:check": "pint --test",
+        "check": [
+            "@format:check",
+            "@analyse",
+            "@test"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Iberfacil\\AeatVnif\\Laravel\\AeatVnifServiceProvider"
+            ],
+            "aliases": {
+                "AeatVnif": "Iberfacil\\AeatVnif\\Laravel\\Facades\\AeatVnif"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": false
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
