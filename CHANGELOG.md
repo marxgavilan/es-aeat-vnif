@@ -2,6 +2,12 @@
 
 Todos los cambios relevantes se anotan aquí. El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) y el proyecto usa [versionado semántico](https://semver.org/lang/es/).
 
+## [1.1.0] - 2026-09-23
+
+### Added
+- `CertificateKind`: el doctor indica si el certificado es de persona física, de representante o de sello.
+- README: qué certificado sirve, con una sección para autónomos.
+
 ## [1.0.0] - 2026-09-23
 
 ### Añadido
@@ -17,4 +23,5 @@ Todos los cambios relevantes se anotan aquí. El formato sigue [Keep a Changelog
 - Puntos de personalización: `CheckObserver` (con `CallbackObserver`), `ResultCache` (en memoria y PSR-16) y `NameNormalizer`.
 - Documentación en español e inglés, guía para agentes (`AGENTS.md`), pruebas sin red, PHPStan nivel 8, Pint y CI para PHP 8.2, 8.3 y 8.4.
 
+[1.1.0]: https://github.com/marxgavilan/es-aeat-vnif/releases/tag/v1.1.0
 [1.0.0]: https://github.com/marxgavilan/es-aeat-vnif/releases/tag/v1.0.0

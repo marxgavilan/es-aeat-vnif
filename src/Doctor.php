@@ -45,6 +45,7 @@ final class Doctor
         try {
             $certificate = CertificateLoader::fromFile($certificatePath, $password, $keyPath);
             $checks[] = ['name' => 'Certificado', 'ok' => true, 'detail' => 'leído correctamente (' . $certificate->info()->subject . ')'];
+            $checks[] = ['name' => 'Tipo', 'ok' => true, 'detail' => $certificate->info()->kind->label()];
         } catch (AeatVnifException $e) {
             $checks[] = ['name' => 'Certificado', 'ok' => false, 'detail' => $e->getMessage()];
         }

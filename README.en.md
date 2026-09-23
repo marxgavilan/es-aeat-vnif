@@ -34,6 +34,10 @@ Real-world examples:
 
 **What you need:** an electronic certificate (entity seal, legal representative or personal) in `.p12` or `.pfx` format, plus its password. It is the same certificate used for the AEAT online office. The package never stores the password or the certificate anywhere.
 
+### Which certificate works?
+
+Any of the three issued by the FNMT or another recognised authority: a **personal** certificate (self-employed people and individuals), a **legal-entity representative** certificate, or an **entity seal**. Self-employed users just export their personal certificate from the browser to a password-protected `.p12`/`.pfx` file. The `doctor` command tells you which kind it detected. Queries are made under your identity: use it only for your own clients, suppliers and procedures.
+
 **What it does NOT do:** it does not prove that the person handing you the details is who they say they are. It only confirms that this NIF and this name exist together in the census. Identifying the person is a different matter (ID document, video identification, electronic signature...).
 
 ---

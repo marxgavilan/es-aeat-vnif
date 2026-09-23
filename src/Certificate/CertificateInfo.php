@@ -18,6 +18,7 @@ final readonly class CertificateInfo
         public string $serialNumber,
         public DateTimeImmutable $validFrom,
         public DateTimeImmutable $validTo,
+        public CertificateKind $kind = CertificateKind::Unknown,
     ) {}
 
     /** @param array<string, mixed> $parsed Salida de openssl_x509_parse(). */
@@ -33,6 +34,7 @@ final readonly class CertificateInfo
             (string) ($parsed['serialNumberHex'] ?? $parsed['serialNumber'] ?? ''),
             (new DateTimeImmutable('@' . (int) ($parsed['validFrom_time_t'] ?? 0)))->setTimezone($utc),
             (new DateTimeImmutable('@' . (int) ($parsed['validTo_time_t'] ?? 0)))->setTimezone($utc),
+            CertificateKind::fromSubject($subject),
         );
     }
 

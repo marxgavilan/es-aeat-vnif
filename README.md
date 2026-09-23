@@ -34,6 +34,20 @@ Ejemplos de uso reales:
 
 **Qué necesitas:** un certificado electrónico (de sello de entidad, de representante de persona jurídica o personal) en formato `.p12` o `.pfx`, con su contraseña. Es el mismo que usas para entrar en la sede electrónica. El paquete no guarda la contraseña ni el certificado en ningún sitio.
 
+### ¿Qué certificado me sirve?
+
+Cualquiera de los tres que emite la FNMT u otra autoridad reconocida:
+
+| Certificado | Quién lo suele tener |
+| --- | --- |
+| **De persona física** | Autónomos y particulares. Es el que tienes instalado para hacer la renta o entrar en la sede. |
+| **De representante de persona jurídica** | Administradores de una sociedad que actúan en su nombre. |
+| **De sello de entidad** | Empresas que automatizan procesos sin una persona detrás. |
+
+Si eres autónomo, no necesitas nada especial: exporta tu certificado personal desde el navegador (o desde la FNMT) a un fichero `.p12` o `.pfx` con contraseña y ya está. El comando `doctor` te dice qué tipo ha detectado.
+
+Ten en cuenta que las consultas quedan hechas **con tu identidad**: úsalo solo para tus propios clientes, proveedores y trámites.
+
 **Qué NO hace:** no acredita que la persona que te da los datos sea quien dice ser. Solo te confirma que ese NIF y ese nombre existen juntos en el censo. La identificación de la persona es otra cosa (documento, vídeo-identificación, firma electrónica…).
 
 ---
