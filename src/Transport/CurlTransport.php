@@ -129,9 +129,11 @@ final class CurlTransport implements ProbeableTransport
         if ($this->proxy !== null) {
             $options[CURLOPT_PROXY] = $this->proxy;
         }
-        if (defined('CURLOPT_PROTOCOLS_STR')) {
-            $options[CURLOPT_PROTOCOLS_STR] = 'https';
-            $options[CURLOPT_REDIR_PROTOCOLS_STR] = 'https';
+        // Las variantes _STR llegan con PHP 8.3 / cURL 7.85; en PHP 8.2 ni existen, asi que
+        // se leen con constant() para no romper el analisis estatico en esa version.
+        if (defined('CURLOPT_PROTOCOLS_STR') && defined('CURLOPT_REDIR_PROTOCOLS_STR')) {
+            $options[(int) constant('CURLOPT_PROTOCOLS_STR')] = 'https';
+            $options[(int) constant('CURLOPT_REDIR_PROTOCOLS_STR')] = 'https';
         } else {
             $options[CURLOPT_PROTOCOLS] = CURLPROTO_HTTPS;
             $options[CURLOPT_REDIR_PROTOCOLS] = CURLPROTO_HTTPS;
