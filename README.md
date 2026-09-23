@@ -1,5 +1,7 @@
 # es-aeat-vnif
 
+[![CI](https://github.com/marxgavilan/es-aeat-vnif/actions/workflows/ci.yml/badge.svg)](https://github.com/marxgavilan/es-aeat-vnif/actions/workflows/ci.yml) [![Packagist](https://img.shields.io/packagist/v/iberfacil/es-aeat-vnif.svg)](https://packagist.org/packages/iberfacil/es-aeat-vnif) [![PHP](https://img.shields.io/packagist/php-v/iberfacil/es-aeat-vnif.svg)](https://packagist.org/packages/iberfacil/es-aeat-vnif) [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)](LICENSE)
+
 Comprueba desde PHP que un NIF existe en el censo de la Agencia Tributaria y que corresponde al nombre que te han dado, usando tu certificado electrónico. Sin framework, con línea de comandos y con adaptador opcional para Laravel.
 
 [English version](README.en.md)
