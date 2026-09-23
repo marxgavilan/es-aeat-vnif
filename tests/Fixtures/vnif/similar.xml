@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><VNifV2Sal xmlns="http://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/burt/jdit/ws/VNifV2Sal.xsd"><Contribuyente><Nif>00000000T</Nif><Nombre>CRISTALINA BRUMOSO ZEFIRA</Nombre><Resultado>NO IDENTIFICADO-SIMILAR</Resultado></Contribuyente></VNifV2Sal></soap:Body></soap:Envelope>
