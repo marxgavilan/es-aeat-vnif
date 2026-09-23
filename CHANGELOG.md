@@ -16,3 +16,5 @@ Todos los cambios relevantes se anotan aquí. El formato sigue [Keep a Changelog
 - Adaptador para Laravel: proveedor autodescubierto, `config/aeat-vnif.php`, fachada `AeatVnif`, comandos `aeat-vnif:check` y `aeat-vnif:doctor`, eventos por petición.
 - Puntos de personalización: `CheckObserver` (con `CallbackObserver`), `ResultCache` (en memoria y PSR-16) y `NameNormalizer`.
 - Documentación en español e inglés, guía para agentes (`AGENTS.md`), pruebas sin red, PHPStan nivel 8, Pint y CI para PHP 8.2, 8.3 y 8.4.
+
+[1.0.0]: https://github.com/marxgavilan/es-aeat-vnif/releases/tag/v1.0.0
